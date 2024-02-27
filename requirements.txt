@@ -6,7 +6,7 @@
 #
 annotated-types==0.6.0
     # via pydantic
-anyio==4.2.0
+anyio
     # via
     #   httpx
     #   openai
@@ -141,7 +141,7 @@ typing-extensions==4.9.0
     #   pydantic
     #   pydantic-core
     #   pyee
-urllib3==2.1.0
+urllib3
     # via requests
 wcwidth==0.2.12
     # via prompt-toolkit
