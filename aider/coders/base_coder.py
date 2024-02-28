@@ -96,7 +96,7 @@ class Coder:
         client,
         main_model,
         io,
-        commit_message_prefix,
+        commit_message_prefix="aider: ",
         fnames=None,
         git_dname=None,
         pretty=True,
