@@ -573,6 +573,7 @@ def main(argv=None, input=None, output=None, force_git_root=None):
             main_model=main_model,
             edit_format=args.edit_format,
             io=io,
+            commit_message_prefix=args.commit_message_prefix,
             skip_model_availabily_check=args.skip_model_availability_check,
             client=client,
             ##

@@ -54,7 +54,6 @@ class Coder:
     last_keyboard_interrupt = None
     max_apply_update_errors = 3
     edit_format = None
-    commit_message_prefix = None  # new attribute
 
     @classmethod
     def create(
@@ -97,6 +96,7 @@ class Coder:
         client,
         main_model,
         io,
+        commit_message_prefix,
         fnames=None,
         git_dname=None,
         pretty=True,
@@ -113,6 +113,7 @@ class Coder:
         voice_language=None,
         aider_ignore_file=None,
     ):
+        self.commit_message_prefix = commit_message_prefix
         self.client = client
 
         if not fnames:
