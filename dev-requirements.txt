@@ -56,13 +56,13 @@ lox==0.11.0
     # via -r dev-requirements.in
 markupsafe==2.1.3
     # via jinja2
-matplotlib==3.8.2
+matplotlib
     # via -r dev-requirements.in
 multiprocess==0.70.15
     # via pathos
 nodeenv==1.8.0
     # via pre-commit
-numpy==1.26.3
+numpy
     # via
     #   contourpy
     #   matplotlib
@@ -73,7 +73,7 @@ packaging==23.2
     #   matplotlib
     #   pytest
     #   sphinx
-pandas==2.1.4
+pandas
     # via -r dev-requirements.in
 pathos==0.3.1
     # via lox
@@ -144,7 +144,7 @@ typing-extensions==4.9.0
     # via typer
 tzdata==2023.4
     # via pandas
-urllib3==2.1.0
+urllib3
     # via requests
 virtualenv==20.25.0
     # via pre-commit
