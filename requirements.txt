@@ -66,11 +66,11 @@ mdurl==0.1.2
     # via markdown-it-py
 networkx==3.2.1
     # via -r requirements.in
-numpy==1.26.3
+numpy>=1.26.0
     # via
     #   -r requirements.in
     #   scipy
-openai==1.6.1
+openai>=1.6.1
     # via -r requirements.in
 packaging==23.2
     # via -r requirements.in
