@@ -54,7 +54,7 @@ class Coder:
     last_keyboard_interrupt = None
     max_apply_update_errors = 3
     edit_format = None
-    commit_message_prefix = "aider: "  # new attribute
+    commit_message_prefix = None  # new attribute
 
     @classmethod
     def create(
@@ -138,6 +138,7 @@ class Coder:
 
         self.auto_commits = auto_commits
         self.dirty_commits = dirty_commits
+        self.commit_message_prefix = args.commit_message_prefix
         self.assistant_output_color = assistant_output_color
         self.code_theme = code_theme
 

@@ -352,6 +352,11 @@ def main(argv=None, input=None, output=None, force_git_root=None):
         help="Enable/disable commits when repo is found dirty (default: True)",
     )
     git_group.add_argument(
+        "--commit-message-prefix",
+        default="aider: ",
+        help="Set the prefix for commit messages (default: 'aider: ')",
+    )
+    git_group.add_argument(
         "--dry-run",
         action=argparse.BooleanOptionalAction,
         default=False,
