@@ -543,6 +543,28 @@ class TestCommands(TestCase):
             del commands
             del repo
 
+    def test_commit_message_prefix_configurable(self):
+        with GitTemporaryDirectory() as repo_dir:
+            repo = git.Repo(repo_dir)
+            io = InputOutput(pretty=False, yes=True)
+            coder = Coder.create(models.GPT35, None, io, commit_message_prefix="AI Coder:")
+            commands = Commands(io, coder)
+
+            # Create and commit a file
+            filename = "test_file.txt"
+            file_path = Path(repo_dir) / filename
+            file_path.write_text("first content")
+            repo.git.add(filename)
+            repo.git.commit("-m", "AI Coder: first commit")
+
+            # Check if the commit message starts with "AI Coder:"
+            last_commit_message = repo.head.commit.message
+            self.assertTrue(last_commit_message.startswith("AI Coder:"))
+
+            del coder
+            del commands
+            del repo
+
     def test_cmd_add_aiderignored_file(self):
         with GitTemporaryDirectory():
             repo = git.Repo()
